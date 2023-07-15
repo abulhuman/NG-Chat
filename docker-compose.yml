@@ -22,8 +22,8 @@ services:
     depends_on:
       - db
     environment:
-      DJANGO_PROJECT_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
-      DJANGO_PROJECT_SETTING_LOCAL_SETTINGS_PATH: 'local/settings.prod.py'
+      NG-CHAT_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
+      NG-CHAT_SETTING_LOCAL_SETTINGS_PATH: 'local/settings.prod.py'
 
 volumes:
   postgresql-data:

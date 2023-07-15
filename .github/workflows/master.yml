@@ -38,4 +38,4 @@ jobs:
           END
       - name: Run deploy on AWS:EC2
         run: |
-          ssh target "cd Django-Project/ && docker compose --project-name Django-Project down && git pull && docker compose build && docker compose --project-name Django-Project up -d --force-recreate"
+          ssh target "cd NG-Chat/ && docker compose --project-name NG-Chat down && git pull && docker compose build && docker compose --project-name NG-Chat up -d --force-recreate"

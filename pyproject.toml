@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "django-project" # set project name here
+name = "ng-chat" # set project name here
 version = "0.1.0"
-description = "Django Project Template"
-authors = ["bucky <buckyroberts@gmail.com>", "adem <abulhuman.dev@gmail.com"]
+description = "NG-Chat"
+authors = ["adem <abulhuman.dev@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "source"}]

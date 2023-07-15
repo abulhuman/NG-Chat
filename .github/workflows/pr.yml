@@ -32,5 +32,5 @@ jobs:
       - name: Test
         run: make test
         env:
-          DJANGO_PROJECT_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
-          DJANGO_PROJECT_SETTING_LOCAL_SETTINGS_PATH: './source/core/settings/templates/settings.github.py'
+          NG-CHAT_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
+          NG-CHAT_SETTING_LOCAL_SETTINGS_PATH: './source/core/settings/templates/settings.github.py'

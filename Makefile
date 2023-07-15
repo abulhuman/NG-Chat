@@ -22,6 +22,10 @@ migrations:
 run-server:
 	poetry run python -m source.manage runserver
 
+.PHONY: manage
+manage:
+	poetry run python -m source.manage $(ARGS)
+
 .PHONY: shell
 shell:
 	poetry run python -m source.manage shell
@@ -37,11 +41,20 @@ test:
 .PHONY: dev-db-up
 dev-db-up:
 	test -f .env || touch .env
-	docker compose -f docker-compose.dev.yml --project-name project_dev_db up --force-recreate db -d
+	docker compose -f docker-compose.dev.yml --project-name ng_chat_dev_db up --force-recreate db -d
 
 .PHONY: dev-db-down
 dev-db-down:
-	docker compose --project-name project_dev_db down
+	docker compose --project-name ng_chat_dev_db down
 
 .PHONY: update
 update: install migrate install-pre-commit ;
+
+.PHONY: gen-secrets
+gen-secrets:
+	poetry run python scripts/production_data.py
+
+# use like this: `make check-echo MSG="Hi adem"`
+.PHONY: check-echo
+check-echo:
+	echo $(MSG)
