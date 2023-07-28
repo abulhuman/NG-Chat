@@ -6,7 +6,7 @@ from split_settings.tools import include, optional
 from source.general.utils.pytest import is_pytest_running
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-ENV_VAR_SETTINGS_PREFIX = 'DJANGO_PROJECT_SETTING_'
+ENV_VAR_SETTINGS_PREFIX = 'NG-CHAT_SETTING_'
 LOCAL_SETTINGS_PATH = os.getenv(f'{ENV_VAR_SETTINGS_PREFIX}LOCAL_SETTINGS_PATH')
 
 if not LOCAL_SETTINGS_PATH:

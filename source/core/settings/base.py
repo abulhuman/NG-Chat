@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'storages',
 
-    # Apps go here
+    # Apps
+    'source.chat.apps.ChatConfig'
 ]
 
 MIDDLEWARE = [
